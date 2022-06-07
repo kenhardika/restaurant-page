@@ -2,3 +2,21 @@
     background-color: beige;
     margin: 0;
 }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
