@@ -12,9 +12,22 @@ module.exports = {
   devServer: {
     static: './dist',
     },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },  
   plugins: [
     new HtmlWebpackPlugin({
       title: 'The Rat-a-Toule',
+      favicon: './components/img/favicon-32x32.png',
     }),
   ],
   output: {
@@ -24,17 +37,5 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: 'single',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-       test: /\.(png|svg|jpg|jpeg|gif)$/i,
-       type: 'asset/resource',
-      },
-    ],
   },
 };
