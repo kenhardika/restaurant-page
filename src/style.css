@@ -3,20 +3,77 @@
     margin: 0;
 }
 
+.backgroundLayer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    opacity: 1;
+    background-color: #ffffff50;
+    backdrop-filter: blur(2px);
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+}
+
+.logoDiv img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.logoDiv img:hover{
+    width: 400px;
+    height: 400px;
+    transition: all 1s;
+}
+
+.logoDiv img:active{
+    width: 350px;
+    height: 350px;
+}
+
+.rotateDivs{
+    transform: rotate(360deg);
+    transition: all 1s;
+}
+
+.disappearDivs{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
 .header{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 20vh;
 }
 
 .content{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 60vh;
 }
 
 .footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 20vh;
 }
