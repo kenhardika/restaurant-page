@@ -47,9 +47,43 @@
     height: 350px;
 }
 
+.notesDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.notes{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    position: fixed;
+    top: 600px;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+.notes:hover {
+    color: rgb(144, 144, 144);
+}
+
 .rotateDivs{
     transform: rotate(360deg);
     transition: all 1s;
+}
+
+.appearDivs{
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 .disappearDivs{
