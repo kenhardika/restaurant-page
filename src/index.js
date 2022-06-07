@@ -28,20 +28,30 @@ function popUpModal(){
     const logo = new Image();
         logo.src = logoRestaurant;
     const logoDiv = document.createElement('div');
-    const notes = document.createElement('div');
-    
+    const notesDiv = document.createElement('div');
+    const notes = document.createElement('p');
+
     logoDiv.className='logoDiv';
     backgroundLayer.className='backgroundLayer';
+    notesDiv.className='notesDiv';
+    notes.className='notes';
+    notes.textContent='click to proceed';
     
+    notesDiv.append(notes);
     logoDiv.append(logo);
-    backgroundLayer.append(logoDiv);
-    document.body.append(backgroundLayer);
+    backgroundLayer.append(logoDiv,notesDiv);
 
-    logoDiv.onclick = ()=> {
+    document.body.append(backgroundLayer);
+    backgroundLayer.onclick = ()=> {
         animateRotate(logoDiv);
         setTimeout(animateDisappear(backgroundLayer), 1000);
         removeLayer(backgroundLayer);
     } 
+    function noteAppear(divs) {
+        animateAppear(divs);
+    }
+
+    setTimeout( ()=> {noteAppear(notes)}, 2000);
 }
 
 function callRestaurantName() {
@@ -51,6 +61,10 @@ function callRestaurantName() {
 
 function animateRotate(divs){
     divs.classList.add('rotateDivs');
+}
+
+function animateAppear(divs){
+    divs.classList.add('appearDivs');
 }
 
 function animateDisappear(divs){
