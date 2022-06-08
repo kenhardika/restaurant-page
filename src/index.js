@@ -2,6 +2,7 @@ import './style.css';
 import saySomething from './printText.js';
 import { head } from 'lodash';
 import logoRestaurant from '../components/img/logo_square.png'
+import { ContextExclusionPlugin } from 'webpack';
 
 function onLoadLayer() {
     const header = document.createElement('div');
@@ -31,6 +32,22 @@ function sliderHeader() {
 
     header.append(slider);
 }
+
+function contentButtons() {
+
+    const contentLayer = document.querySelector('.content');
+    const menuBtn = document.createElement('button');
+    const locationBtn = document.createElement('button');
+    const contactUsBtn = document.createElement('button');
+
+    contentLayer.className='content';
+    menuBtn.id='menuBtn';
+    locationBtn.id='locationBtn';
+    contactUsBtn.id='contactUsBtn';
+
+    contentLayer.append(menuBtn,locationBtn,contactUsBtn);
+}
+
 
 function videoFooter(){
     const footer = document.querySelector('.footer'); 
@@ -103,6 +120,7 @@ window.onload =()=> {
     onLoadLayer();
     popUpModal();
     sliderHeader();
+    contentButtons();
     videoFooter();
     callRestaurantName();
 }

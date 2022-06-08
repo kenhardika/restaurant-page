@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/kenhardika/restaurant-page#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "uglify-js": "^3.16.0"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
