@@ -32,6 +32,24 @@ function sliderHeader() {
     header.append(slider);
 }
 
+function contentButtons() {
+
+    const contentLayer = document.querySelector('.content');
+    const menuBtn = document.createElement('button');
+    const locationBtn = document.createElement('button');
+    const contactUsBtn = document.createElement('button');
+
+    contentLayer.className='content';
+    menuBtn.id='menuBtn';
+    menuBtn.textContent='Menu';
+    locationBtn.id='locationBtn';
+    locationBtn.textContent='Location';
+    contactUsBtn.id='contactUsBtn';
+    contactUsBtn.textContent='Contact Us';
+
+    contentLayer.append(menuBtn,locationBtn,contactUsBtn);
+}
+
 function videoFooter(){
     const footer = document.querySelector('.footer'); 
     const videoBg = document.createElement('iframe');
@@ -103,6 +121,7 @@ window.onload =()=> {
     onLoadLayer();
     popUpModal();
     sliderHeader();
+    contentButtons();
     videoFooter();
     callRestaurantName();
 }
