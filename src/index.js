@@ -26,9 +26,20 @@ function sliderHeader() {
 
     const header = document.querySelector('.header');
     const slider = document.createElement('div');
+    const layerHeader = document.createElement('div');
+    const nameHeader = document.createElement('p');
+    const theHeader = document.createElement('p');
 
+    theHeader.className='theHeader';
+    nameHeader.className='nameHeader';
+    theHeader.textContent = 'THE';
+    nameHeader.textContent = 'Rat-A-Toulé';
+
+
+    layerHeader.className='layerHeader';
     slider.className='sliderHeader';
-
+    layerHeader.append(theHeader,nameHeader);
+    slider.append(layerHeader);
     header.append(slider);
 }
 

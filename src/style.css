@@ -1,8 +1,14 @@
+
+:root {
+    --backgroundColor: #ededed;
+}
 *{
-    background-color: beige;
+    background-color: var(--backgroundColor);
     margin: 0;
     box-sizing: border-box;
 }
+@import 
+url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lobster&family=Noto+Serif&family=Nunito:wght@200&family=PT+Sans&family=Sora:wght@300;400&display=swap');
 
 .backgroundLayer {
     position: fixed;
@@ -97,13 +103,43 @@
     align-items: center;
     justify-content: center;
     height: 45vh;
-    border: 1px solid black;
 }
 
 .sliderHeader{
+    box-sizing: border-box;
     height: 45vh;
     width: 100vw;
     background-image: url(../components/img/french-food.jpg);
+}
+
+.layerHeader{
+    height: 45vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3030306c;
+    backdrop-filter: blur(2px);
+    color: white;
+    font-family: 'Noto Serif', serif;
+}
+
+.theHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+
+    font-size: 35px;
+    background-color: transparent;
+} 
+.nameHeader {
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    background-color: transparent;
 }
 
 .content{
@@ -111,20 +147,40 @@
     align-items: center;
     justify-content: center;
     height: 10vh;
+    gap: 20px;
     z-index: 1;
-    background-color: beige;
+    background-color: var(--backgroundColor);
+}
+
+#menuBtn, #locationBtn, #contactUsBtn{
+    font-family: 'Noto Serif';
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+#menuBtn:hover, #locationBtn:hover, #contactUsBtn:hover{
+    color: #888888;
+    transition: all 0.5s;
+}
+
+#menuBtn:active, #locationBtn:active, #contactUsBtn:active{
+    transform: translateY(3px);
 }
 
 .footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45vh;
+    height: auto;
+    background-color: var(--backgroundColor)
 }
+
 .videoBg{
     pointer-events: none;  
     position: relative;
-    top: 30vh;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
