@@ -123,14 +123,14 @@
 }
 .videoBg{
     pointer-events: none;  
-    position: fixed;
+    position: relative;
     top: 30vh;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw; 
-    height: 981px;
+    width: 130vw; 
+    height: 130vh;
     z-index: 0;
     border: transparent;
-    clip-path: inset(200px 0px 200px 0px)
+    clip-path: inset(250px 0px 250px 0px)
 }
