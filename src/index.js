@@ -14,23 +14,47 @@ function onLoadLayer() {
     footer.className='footer';
     container.className='container';
 
-    header.textContent='this is the header';
-    content.textContent='this is the content';
-    footer.textContent='this is the footer';
+    //header.textContent='this is the header';
+   //content.textContent='this is the content';
+    //footer.textContent='this is the footer';
 
     container.append(header, content, footer);
     document.body.append(container);
+}
+
+function sliderHeader() {
+
+    const header = document.querySelector('.header');
+    const slider = document.createElement('div');
+
+    slider.className='sliderHeader';
+
+    header.append(slider);
+}
+
+function videoFooter(){
+    const footer = document.querySelector('.footer'); 
+    const videoBg = document.createElement('iframe');
+//    const sourceVid =document.createElement('source');
+
+
+    videoBg.className='videoBg';
+    videoBg.allowFullscreen='1';
+    videoBg.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    videoBg.src=`https://www.youtube.com/embed/yR076KE_Fb4?controls=0&autoplay=1&mute=1&modestbranding=1&frameborder=0&iv_load_policy=3`;
+
+    footer.append(videoBg);   
 }
 
 function popUpModal(){
 
     const backgroundLayer = document.createElement('div');
     const logo = new Image();
-        logo.src = logoRestaurant;
     const logoDiv = document.createElement('div');
     const notesDiv = document.createElement('div');
     const notes = document.createElement('p');
 
+    logo.src = logoRestaurant;
     logoDiv.className='logoDiv';
     backgroundLayer.className='backgroundLayer';
     notesDiv.className='notesDiv';
@@ -78,5 +102,7 @@ function removeLayer(divs){
 window.onload =()=> {
     onLoadLayer();
     popUpModal();
+    sliderHeader();
+    videoFooter();
     callRestaurantName();
 }

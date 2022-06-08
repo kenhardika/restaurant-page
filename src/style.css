@@ -1,6 +1,7 @@
 *{
     background-color: beige;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .backgroundLayer {
@@ -30,21 +31,21 @@
 
 .logoDiv img{
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    height: auto;
     opacity: 1;
     transition: all 1s;
 }
 
 .logoDiv img:hover{
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: auto;
     transition: all 1s;
 }
 
 .logoDiv img:active{
-    width: 350px;
-    height: 350px;
+    width: 22vw;
+    height: auto;
 }
 
 .notesDiv{
@@ -60,8 +61,8 @@
     display: flex;
     
     position: fixed;
-    top: 600px;
-    bottom: 100px;
+    top: 80vh;
+    bottom: 20vh;
     left: 0;
     right: 0;
     opacity: 0;
@@ -95,19 +96,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 45vh;
+    border: 1px solid black;
+}
+
+.sliderHeader{
+    height: 45vh;
+    width: 100vw;
+    background-image: url(../components/img/french-food.jpg);
 }
 
 .content{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 10vh;
+    z-index: 1;
+    background-color: beige;
 }
 
 .footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 45vh;
+}
+.videoBg{
+    pointer-events: none;  
+    position: fixed;
+    top: 30vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; 
+    height: 981px;
+    z-index: 0;
+    border: transparent;
+    clip-path: inset(200px 0px 200px 0px)
 }
