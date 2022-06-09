@@ -1,11 +1,14 @@
 
 :root {
     --backgroundColor: #ededed;
+    --vidTextOvrFont: clamp(0.8rem, 1vw, 2vw);
+    --btnTextCont: clamp(1rem, 1.2vw, 2vw);
 }
 *{
     background-color: var(--backgroundColor);
     margin: 0;
     box-sizing: border-box;
+    height: auto;
 }
 @import 
 url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lobster&family=Noto+Serif&family=Nunito:wght@200&family=PT+Sans&family=Sora:wght@300;400&display=swap');
@@ -142,6 +145,13 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     background-color: transparent;
 }
 
+.underHeader{
+    font-size: 12px;
+    letter-spacing: 2px;
+    justify-content: center;
+    background-color: transparent;
+}
+
 .content{
     display: flex;
     align-items: center;
@@ -156,7 +166,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     font-family: 'Noto Serif';
     border: none;
     background-color: transparent;
-    font-size: 20px;
+    font-size: var(--btnTextCont);
     transition: all 0.5s;
 }
 
@@ -173,9 +183,62 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 80vh;
     background-color: var(--backgroundColor)
 }
+
+.layerFooter{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    top: 59vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0000005b;
+    width: auto;
+    height: 72vh;
+    padding-top: 10vh;
+}   
+
+.layerText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: #0000005b;
+    width: 40vw;
+    height: 52vh;
+}
+
+.textOverlayCaption{
+    padding-top: 5vh;
+    font-family: 'Noto Serif', serif;
+    font-size: clamp(1rem, 2vw, 3rem);
+    color: #d0d0d0;
+    background-color: transparent;
+}
+
+.textOverlayPara{
+    text-align: justify;
+    padding: 5vh;
+    font-family: 'Noto Serif', serif;
+    font-size: var(--vidTextOvrFont);
+    color: #d0d0d0;
+    background-color: transparent;
+}
+
+.textOverlayRegards{
+    width: 35vw;
+    text-align: right;
+    font-family: 'Noto Serif', serif;
+    font-size: var(--vidTextOvrFont);
+    color: #d0d0d0;
+    background-color: transparent;
+}
+
 
 .videoBg{
     pointer-events: none;  
@@ -189,4 +252,13 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     z-index: 0;
     border: transparent;
     clip-path: inset(250px 0px 250px 0px)
+}
+
+.credit{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--backgroundColor);
+    height: 30vh;
+    width: auto;
 }

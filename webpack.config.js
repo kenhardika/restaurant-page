@@ -26,7 +26,7 @@ module.exports = {
   },  
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'The Rat-a-Toule',
+      title: 'The Rat-a-Toulé',
       favicon: './components/img/favicon-32x32.png',
     }),
   ],

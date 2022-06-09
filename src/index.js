@@ -7,14 +7,16 @@ function onLoadLayer() {
     const header = document.createElement('div');
     const content = document.createElement('div');
     const footer = document.createElement('div');
+    const credit = document.createElement('div');
     const container = document.createElement('div');
 
     header.className='header';
     content.className='content';
     footer.className='footer';
+    credit.className='credit';
     container.className='container';
 
-    container.append(header, content, footer);
+    container.append(header, content, footer, credit);
     document.body.append(container);
 }
 
@@ -25,16 +27,19 @@ function sliderHeader() {
     const layerHeader = document.createElement('div');
     const nameHeader = document.createElement('p');
     const theHeader = document.createElement('p');
+    const underHeader = document.createElement('p');
 
     theHeader.className='theHeader';
     nameHeader.className='nameHeader';
+    underHeader.className='underHeader';
     theHeader.textContent = 'THE';
     nameHeader.textContent = 'Rat-A-Toulé';
-
-
+    underHeader.textContent = 'Authentic French Cuisine since 1996';
     layerHeader.className='layerHeader';
     slider.className='sliderHeader';
-    layerHeader.append(theHeader,nameHeader);
+
+
+    layerHeader.append(theHeader,nameHeader, underHeader);
     slider.append(layerHeader);
     header.append(slider);
 }
@@ -63,13 +68,28 @@ function contentButtons() {
 function videoFooter(){
     const footer = document.querySelector('.footer'); 
     const videoBg = document.createElement('iframe');
+    const layerFooter = document.createElement('div');
+    const layerText = document.createElement('div');
+    const textOverlayCaption = document.createElement('p');
+    const textOverlayPara = document.createElement('p');
+    const textOverlayRegards =document.createElement('p');
 
+    layerText.className='layerText';
+    textOverlayCaption.className='textOverlayCaption';
+    textOverlayPara.className='textOverlayPara';
+    textOverlayCaption.textContent='Loved, Authentic, Grand';
+    textOverlayPara.textContent='Acquire the taste of greatness through our passionate gourmet, fullfill your desire with our authentic french cuisine from the bottom of ocean to the highest sky on earth. We provide you extra careness in our craftmanship, from Ethical Hunting to Organic Food. Halal with certificates provided.'
+    textOverlayRegards.className = 'textOverlayRegards';
+    textOverlayRegards.textContent = 'Regards, The Rat-A-Toulé Team';
+    layerFooter.className = 'layerFooter';
     videoBg.className='videoBg';
     videoBg.allowFullscreen='1';
     videoBg.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     videoBg.src=`https://www.youtube.com/embed/yR076KE_Fb4?controls=0&playlist=yR076KE_Fb4&loop=1&autoplay=1&mute=1&modestbranding=1&frameborder=0&iv_load_policy=3`;
-
-    footer.append(videoBg);   
+    
+    layerText.append(textOverlayCaption, textOverlayPara, textOverlayRegards);
+    layerFooter.appendChild(layerText);
+    footer.append(videoBg, layerFooter);   
 }
 
 function popUpModal(){
