@@ -2,7 +2,6 @@ import './style.css';
 import saySomething from './printText.js';
 import { head } from 'lodash';
 import logoRestaurant from '../components/img/logo_square.png'
-import { ContextExclusionPlugin } from 'webpack';
 
 function onLoadLayer() {
     const header = document.createElement('div');
@@ -15,10 +14,6 @@ function onLoadLayer() {
     footer.className='footer';
     container.className='container';
 
-    //header.textContent='this is the header';
-   //content.textContent='this is the content';
-    //footer.textContent='this is the footer';
-
     container.append(header, content, footer);
     document.body.append(container);
 }
@@ -27,33 +22,47 @@ function sliderHeader() {
 
     const header = document.querySelector('.header');
     const slider = document.createElement('div');
+    const layerHeader = document.createElement('div');
+    const nameHeader = document.createElement('p');
+    const theHeader = document.createElement('p');
 
+    theHeader.className='theHeader';
+    nameHeader.className='nameHeader';
+    theHeader.textContent = 'THE';
+    nameHeader.textContent = 'Rat-A-Toulé';
+
+
+    layerHeader.className='layerHeader';
     slider.className='sliderHeader';
-
+    layerHeader.append(theHeader,nameHeader);
+    slider.append(layerHeader);
     header.append(slider);
 }
 
 function contentButtons() {
 
     const contentLayer = document.querySelector('.content');
+    const homeBtn = document.createElement('button');
     const menuBtn = document.createElement('button');
     const locationBtn = document.createElement('button');
     const contactUsBtn = document.createElement('button');
 
     contentLayer.className='content';
+    homeBtn.id='homeBtn';
+    homeBtn.textContent='Home';
     menuBtn.id='menuBtn';
+    menuBtn.textContent='Menu';
     locationBtn.id='locationBtn';
+    locationBtn.textContent='Location';
     contactUsBtn.id='contactUsBtn';
+    contactUsBtn.textContent='Contact Us';
 
-    contentLayer.append(menuBtn,locationBtn,contactUsBtn);
+    contentLayer.append(homeBtn,menuBtn,locationBtn,contactUsBtn);
 }
-
 
 function videoFooter(){
     const footer = document.querySelector('.footer'); 
     const videoBg = document.createElement('iframe');
-//    const sourceVid =document.createElement('source');
-
 
     videoBg.className='videoBg';
     videoBg.allowFullscreen='1';
