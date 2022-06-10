@@ -265,7 +265,28 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
 
 .menuLayer{
     display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
     width: 80vw;
     height: 35vw;
-    background-color: #90909086;
+    background-color: #4f585c72;
+}
+
+.menuList{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+.menuImg{
+    width: 200px;
+    height: auto;
+}
+
+.menuText{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
 }
