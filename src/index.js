@@ -2,6 +2,7 @@ import './style.css';
 import saySomething from './printText.js';
 import { head } from 'lodash';
 import logoRestaurant from '../components/img/logo_square.png'
+import { openMenu, removeAllChildNodes } from './menu';
 
 function onLoadLayer() {
     const header = document.createElement('div');
@@ -63,10 +64,20 @@ function contentButtons() {
     contactUsBtn.textContent='Contact Us';
 
     contentLayer.append(homeBtn,menuBtn,locationBtn,contactUsBtn);
+
+    menuBtn.onclick = () => { 
+        openMenu();
+    }
+    homeBtn.onclick = () => {
+        videoFooter();
+    }
+
 }
 
 function videoFooter(){
-    const footer = document.querySelector('.footer'); 
+    const footer = document.querySelector('.footer');
+    removeAllChildNodes(footer);
+    
     const videoBg = document.createElement('iframe');
     const layerFooter = document.createElement('div');
     const layerText = document.createElement('div');
@@ -124,6 +135,8 @@ function popUpModal(){
     setTimeout( ()=> {noteAppear(notes)}, 2000);
 }
 
+
+
 function callRestaurantName() {
     console.log('Welcome to The Rat-a-Toule');
     saySomething();
@@ -153,3 +166,5 @@ window.onload =()=> {
     videoFooter();
     callRestaurantName();
 }
+
+export default animateAppear

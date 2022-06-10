@@ -183,7 +183,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 71vh;
     background-color: var(--backgroundColor)
 }
 
@@ -192,7 +192,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    top: 59vh;
+    top: 54.5vh;
     bottom: 0;
     left: 0;
     right: 0;
@@ -261,4 +261,11 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     background-color: var(--backgroundColor);
     height: 30vh;
     width: auto;
+}
+
+.menuLayer{
+    display: grid;
+    width: 80vw;
+    height: 35vw;
+    background-color: #90909086;
 }
