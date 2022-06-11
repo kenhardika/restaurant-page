@@ -279,14 +279,26 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     background-color: transparent;
 }
 
-.menuImg{
-    width: 200px;
-    height: auto;
-}
-
-.menuText{
+.foodDiv{
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.foodImg{
+    width: auto;
+    height: 100px;
+}
+
+.foodText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
     text-align: center;
+}
+.foodText p {
     background-color: transparent;
 }
