@@ -1,25 +1,16 @@
-import animateAppear from ".";
-// import foodCassoulet from '../components/img/food-Cassoulet.jpg';
-// import foodFilet from '../components/img/food-filetmignon.jpg';
-// import foodChoco from '../components/img/food-Chocolate-soufflé.jpeg';
-// import foodConfit from '../components/img/food-Confit-de-canard.jpg';
-// import foodCoq from '../components/img/food-coq-au-vin.jpg';
-// import foodFlamiche from '../components/img/food-Flamiche.jpg';
-// import foodRat from '../components/img/food-Ratatoullie.jpg';
-// import foodSalad from '../components/img/food-Salade-Niçoise.jpg';
-// import foodSoup from '../components/img/food-soup-oignon.jpeg';
-
+// import animateAppear from ".";
 
 function openMenu() {
     console.log('Open Menu');
-    const footer = document.querySelector('.footer');
+    const main = document.querySelector('.main');
     
-    removeAllChildNodes(footer);
-
-    //showMenu();
-    //menuLayer.append(listOfMenu());
+    removeAllChildNodes(main);
     
-    footer.append(appendListOfMenu());
+    const title = document.createElement('div');
+        title.textContent='Our Menu';
+        title.className='titleMenu'; 
+    
+    main.append( title , appendListOfMenu());
 }
 
 function appendListOfMenu(){
@@ -29,7 +20,7 @@ function appendListOfMenu(){
         createMenu('Cassoulet', 'Baked Beans, Marinated Chicken, Special Sauces', '$20'), 
         createMenu('Chocolate Soufflé', 'Molten Chocolate, Dark Northern Sugar, Happy Powder', '$16'),
         createMenu('Confit de Canard', 'Roasted Duck Legs, Baked Peas, Herbal Seasoning', '$23'),
-        createMenu('Coq au Vin', 'Marinated Chicken Filet, French Curry Sauces, Fresh Veggies', '$26'),
+        createMenu('Coq au Vin', 'Marinated Chicken Filet, French Curry Sauces, Roasted Veggies', '$26'),
         createMenu('Filet Mignon', 'Roasted Beef, Marinated with Enak Sauces, Very Good', '$21' ),
         createMenu('Flamiche', 'Meat Pies, Cheese, and Minced Meat', '$18'),
         createMenu('Ratatoullie', 'Thin Vegetables Sliced and arranged like a Train, Good Movie Food', '$15'),

@@ -3,21 +3,22 @@ import saySomething from './printText.js';
 import { head } from 'lodash';
 import logoRestaurant from '../components/img/logo_square.png'
 import { openMenu, removeAllChildNodes } from './menu';
+import openLocation from './location';
 
 function onLoadLayer() {
     const header = document.createElement('div');
     const content = document.createElement('div');
-    const footer = document.createElement('div');
+    const main = document.createElement('div');
     const credit = document.createElement('div');
     const container = document.createElement('div');
 
     header.className='header';
     content.className='content';
-    footer.className='footer';
+    main.className='main';
     credit.className='credit';
     container.className='container';
 
-    container.append(header, content, footer, credit);
+    container.append(header, content, main, credit);
     document.body.append(container);
 }
 
@@ -69,17 +70,19 @@ function contentButtons() {
         openMenu();
     }
     homeBtn.onclick = () => {
-        videoFooter();
+        videoMain();
     }
-
+    locationBtn.onclick = () => {
+        openLocation();
+    }
 }
 
-function videoFooter(){
-    const footer = document.querySelector('.footer');
-    removeAllChildNodes(footer);
+function videoMain(){
+    const main = document.querySelector('.main');
+    removeAllChildNodes(main);
     
     const videoBg = document.createElement('iframe');
-    const layerFooter = document.createElement('div');
+    const layerMain = document.createElement('div');
     const layerText = document.createElement('div');
     const textOverlayCaption = document.createElement('p');
     const textOverlayPara = document.createElement('p');
@@ -92,15 +95,15 @@ function videoFooter(){
     textOverlayPara.textContent='Acquire the taste of greatness through our passionate gourmet, fullfill your desire with our authentic french cuisine from the bottom of ocean to the highest sky on earth. We provide you extra careness in our craftmanship, from Ethical Hunting to Organic Food. Halal with certificates provided.'
     textOverlayRegards.className = 'textOverlayRegards';
     textOverlayRegards.textContent = 'Regards, The Rat-A-Toulé Team';
-    layerFooter.className = 'layerFooter';
+    layerMain.className = 'layerMain';
     videoBg.className='videoBg';
     videoBg.allowFullscreen='1';
     videoBg.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     videoBg.src=`https://www.youtube.com/embed/yR076KE_Fb4?controls=0&playlist=yR076KE_Fb4&loop=1&autoplay=1&mute=1&modestbranding=1&frameborder=0&iv_load_policy=3`;
     
     layerText.append(textOverlayCaption, textOverlayPara, textOverlayRegards);
-    layerFooter.appendChild(layerText);
-    footer.append(videoBg, layerFooter);   
+    layerMain.appendChild(layerText);
+    main.append(videoBg, layerMain);   
 }
 
 function popUpModal(){
@@ -163,7 +166,7 @@ window.onload =()=> {
     popUpModal();
     sliderHeader();
     contentButtons();
-    videoFooter();
+    videoMain();
     callRestaurantName();
 }
 

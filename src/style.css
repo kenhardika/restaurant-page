@@ -179,7 +179,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     transform: translateY(3px);
 }
 
-.footer{
+.main{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,7 +187,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     background-color: var(--backgroundColor)
 }
 
-.layerFooter{
+.layerMain{
     position: absolute;
     display: flex;
     align-items: flex-start;
@@ -263,20 +263,50 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     width: auto;
 }
 
+.titleMenu, .titleLocation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 10px;
+}
+
 .menuLayer{
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, minmax(100px, 0.9fr));
     grid-template-rows: repeat(3, minmax(100px, 1fr));
     width: 80vw;
     height: 35vw;
-    background-color: #4f585c72;
+    background-color: #4f585c30;
+    transition: all 0.5s;
+
+    border-radius: 20px;
+    border: 5px double black;
+}
+
+.locationLayer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 35vw;
+    background-color: #4f585c30;
+    transition: all 0.5s;
+
+    border-radius: 20px;
+    border: 5px double black;
 }
 
 .menuList{
+    font-family: 'Noto Serif', serif;
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    align-items: center;
     background-color: transparent;
+
+    padding: 10px;
 }
 
 .foodDiv{
@@ -287,18 +317,40 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
 }
 
 .foodImg{
-    width: auto;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 0.2rem solid #000000b2;
+    box-shadow: 0 0.3rem 0.3rem 0.2rem #7e7e7e;
 }
 
 .foodText{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    padding: 5px;
     justify-content: center;
+    padding-left:20px ;
     background-color: transparent;
-    text-align: center;
 }
 .foodText p {
     background-color: transparent;
+}
+.foodText p:first-child{
+    font-size: 20px;
+    font-weight: 600;
+}
+.foodText p:nth-child(2){
+    font-style: italic;
+    font-size: 14px;
+}
+.foodText p:last-child {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.locationMaps{
+    width: 700px;
+    height: 500px;
+    border: 0;
 }
