@@ -98,6 +98,7 @@ function videoMain(){
     layerMain.className = 'layerMain';
     videoBg.className='videoBg';
     videoBg.allowFullscreen='1';
+    
     videoBg.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     videoBg.src=`https://www.youtube.com/embed/yR076KE_Fb4?controls=0&playlist=yR076KE_Fb4&loop=1&autoplay=1&mute=1&modestbranding=1&frameborder=0&iv_load_policy=3`;
     
