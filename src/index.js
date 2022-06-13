@@ -4,21 +4,22 @@ import { head } from 'lodash';
 import logoRestaurant from '../components/img/logo_square.png'
 import { openMenu, removeAllChildNodes } from './menu';
 import openLocation from './location';
+import openContactUs from './contactUs';
 
 function onLoadLayer() {
     const header = document.createElement('div');
     const content = document.createElement('div');
     const main = document.createElement('div');
-    const credit = document.createElement('div');
+    const footer = document.createElement('div');
     const container = document.createElement('div');
 
     header.className='header';
     content.className='content';
     main.className='main';
-    credit.className='credit';
+    footer.className='footer';
     container.className='container';
 
-    container.append(header, content, main, credit);
+    container.append(header, content, main, footer);
     document.body.append(container);
 }
 
@@ -74,6 +75,9 @@ function contentButtons() {
     }
     locationBtn.onclick = () => {
         openLocation();
+    }
+    contactUsBtn.onclick = () => {
+        openContactUs();
     }
 }
 
