@@ -183,8 +183,8 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 71vh;
+    justify-content: flex-start;
+    height: 100vh;
     background-color: var(--backgroundColor)
 }
 
@@ -254,7 +254,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     clip-path: inset(250px 0px 250px 0px);
 }
 
-.credit{
+.footer{
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -279,7 +279,7 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     grid-template-columns: repeat(3, minmax(100px, 0.9fr));
     grid-template-rows: repeat(3, minmax(100px, 1fr));
     width: 80vw;
-    height: 35vw;
+    height: 55vw;
     background-color: #4f585c30;
     transition: all 0.5s;
 
@@ -363,5 +363,45 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     height: 500px;
     border: 0;
     padding: 10px;
+    background-color: transparent;
+}
+
+.layerContactUs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 35vw;
+    background-color: #4f585c30;
+    transition: all 0.5s;
+
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px double black;
+}
+
+.layerRightContact, .layerLeftContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    width: 40vw;
+    background-color: transparent;
+}
+
+.layerRightContact{
+    background-color: aliceblue;
+    border-radius: 20px;
+    height: 20vh;
+    padding: 10px;
+}
+
+.contactDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
 }
