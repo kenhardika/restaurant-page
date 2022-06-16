@@ -111,6 +111,14 @@ function videoMain(){
     main.append(videoBg, layerMain);   
 }
 
+function footerDivs(){
+    const footer = document.querySelector('.footer');
+    const credit = document.createElement('p');
+
+    credit.textContent='@kenhardika 2022 - The Odin Projects'
+    footer.append(credit);
+}
+
 function popUpModal(){
 
     const backgroundLayer = document.createElement('div');
@@ -173,6 +181,7 @@ window.onload =()=> {
     contentButtons();
     videoMain();
     callRestaurantName();
+    footerDivs();
 }
 
 export default animateAppear
