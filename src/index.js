@@ -115,7 +115,7 @@ function footerDivs(){
     const footer = document.querySelector('.footer');
     const credit = document.createElement('p');
 
-    credit.textContent='@kenhardika 2022 - The Odin Projects'
+    credit.textContent='github-@kenhardika 2022 - The Odin Projects'
     footer.append(credit);
 }
 
