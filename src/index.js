@@ -1,6 +1,5 @@
 import './style.css';
-import saySomething from './printText.js';
-import { head } from 'lodash';
+
 import logoRestaurant from '../components/img/logo_square.png'
 import { openMenu, removeAllChildNodes } from './menu';
 import openLocation from './location';
@@ -149,13 +148,6 @@ function popUpModal(){
     }
 
     setTimeout( ()=> {noteAppear(notes)}, 2000);
-}
-
-
-
-function callRestaurantName() {
-    console.log('Welcome to The Rat-a-Toule');
-    saySomething();
 }
 
 function animateRotate(divs){
