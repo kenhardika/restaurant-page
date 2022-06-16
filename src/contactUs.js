@@ -81,7 +81,7 @@ function createContactP( icon, text ){
     layer.className='contactDiv';
 
     img.className='contactImg';
-    img.src=`./img/${icon}.svg`;
+    img.src= `./img/${icon}.svg`;
     img.style.backgroundColor='transparent';
     img.style.width='20px'
     tex.className='contactText';
