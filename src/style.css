@@ -390,6 +390,8 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     align-items: center;
     justify-content: flex-start;
     
+    gap: 10px;
+
     width: 30vw;
     background-color: transparent;
 }
@@ -411,4 +413,32 @@ url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lob
     gap: 10px;
     justify-content: center;
     background-color: transparent;
+}
+
+.layerCaptionContact {
+    background-color: transparent;
+    font-size: 22px;
+}
+
+.layerForms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: transparent;
+}
+
+.layerForms input{
+    width: 250px;
+    border-radius: 5px;
+}
+
+.layerForms input:nth-child(3){
+    height: 10vh;
+}
+
+.layerForms button{
+    border-radius: 5px;
+    width: 100px;
 }

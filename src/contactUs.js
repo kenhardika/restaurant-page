@@ -1,3 +1,4 @@
+import { create } from "lodash";
 import { removeAllChildNodes } from "./menu";
 
 function openContactUs() {
@@ -21,18 +22,56 @@ function createContactUs(){
     layerLeft.className='layerLeftContact';
 
     layer.className='layerContactUs';
-
-    layerLeft.append('this is the forms');
+    layerLeft.append(
+        createCaptionDivForms(),
+        createDivForms()
+    );
     layerRight.append(
         createContactP('telephone', '+62-9928-6698'),
         createContactP('envelope', 'theratatoule@rest.com'),
         createContactP('clock', 'Open Everyday 08:00-22:00')
     );
     
-    layer.append(layerLeft, layerRight)
+    layer.append(layerLeft, layerRight);
     return layer;
 }
 
+function createCaptionDivForms(){
+    const layerCap = document.createElement('div');
+    layerCap.className='layerCaptionContact';
+    layerCap.textContent='Send us a Message!';
+    return layerCap;
+}
+
+function createDivForms() {
+    const layerForm = document.createElement('form')
+    layerForm.className='layerForms';
+    layerForm.append(
+        createForms('text', 'Your Name'), 
+        createForms('email', 'Your Email'),
+        createForms('text', 'Your Message'),
+        createButton('Submit')
+        );
+    return layerForm
+}
+
+function createForms(inputType, inputName){
+    const inputForms = document.createElement('input');
+
+    inputForms.name=`${inputName}`;
+    inputForms.type=`${inputType}`;
+    inputForms.placeholder=`${inputName}`;
+
+    return inputForms;
+}
+
+function createButton(name){
+    const button = document.createElement('button');
+    button.id = 'submitContactUsBtn';
+    button.textContent = `${name}`;
+
+    return button;
+}
 
 function createContactP( icon, text ){
     const layer = document.createElement('div');
