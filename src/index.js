@@ -113,7 +113,8 @@ function videoMain(){
 function footerDivs(){
     const footer = document.querySelector('.footer');
     const credit = document.createElement('p');
-
+    
+    credit.className='footerDivs';
     credit.textContent='github-@kenhardika 2022 - The Odin Projects'
     footer.append(credit);
 }
@@ -172,7 +173,6 @@ window.onload =()=> {
     sliderHeader();
     contentButtons();
     videoMain();
-    callRestaurantName();
     footerDivs();
 }
 
