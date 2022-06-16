@@ -1,0 +1,447 @@
+
+:root {
+    --backgroundColor: #ededed;
+    --vidTextOvrFont: clamp(0.8rem, 1vw, 2vw);
+    --btnTextCont: clamp(1rem, 1.2vw, 2vw);
+}
+*{
+    background-color: var(--backgroundColor);
+    margin: 0;
+    box-sizing: border-box;
+    height: auto;
+}
+@import 
+url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&family=Lobster&family=Noto+Serif&family=Nunito:wght@200&family=PT+Sans&family=Sora:wght@300;400&display=swap');
+
+.backgroundLayer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    opacity: 1;
+    background-color: #ffffff50;
+    backdrop-filter: blur(2px);
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+}
+
+.logoDiv img{
+    border-radius: 50%;
+    width: 20vw;
+    height: auto;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.logoDiv img:hover{
+    width: 25vw;
+    height: auto;
+    transition: all 1s;
+}
+
+.logoDiv img:active{
+    width: 22vw;
+    height: auto;
+}
+
+.notesDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.notes{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    position: fixed;
+    top: 80vh;
+    bottom: 20vh;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+.notes:hover {
+    color: rgb(144, 144, 144);
+}
+
+.rotateDivs{
+    transform: rotate(360deg);
+    transition: all 1s;
+}
+
+.appearDivs{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.disappearDivs{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+}
+
+.sliderHeader{
+    box-sizing: border-box;
+    height: 45vh;
+    width: 100vw;
+    background-image: url(../components/img/french-food.jpg);
+}
+
+.layerHeader{
+    height: 45vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3030306c;
+    backdrop-filter: blur(2px);
+    color: white;
+    font-family: 'Noto Serif', serif;
+}
+
+.theHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+
+    font-size: 35px;
+    background-color: transparent;
+} 
+.nameHeader {
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    background-color: transparent;
+}
+
+.underHeader{
+    font-size: 12px;
+    letter-spacing: 2px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    gap: 20px;
+    z-index: 1;
+    background-color: var(--backgroundColor);
+}
+
+#homeBtn, #menuBtn, #locationBtn, #contactUsBtn{
+    font-family: 'Noto Serif';
+    border: none;
+    background-color: transparent;
+    font-size: var(--btnTextCont);
+    transition: all 0.5s;
+}
+
+#homeBtn:hover, #menuBtn:hover, #locationBtn:hover, #contactUsBtn:hover{
+    color: #888888;
+    transition: all 0.5s;
+}
+
+#homeBtn:active, #menuBtn:active, #locationBtn:active, #contactUsBtn:active{
+    transform: translateY(3px);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: var(--backgroundColor)
+}
+
+.layerMain{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    top: 55.5vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0000005b;
+    width: auto;
+    height: 70vh;
+    padding-top: 10vh;
+}   
+
+.layerText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: #0000005b;
+    width: 40vw;
+    height: 52vh;
+}
+
+.textOverlayCaption{
+    padding-top: 5vh;
+    font-family: 'Noto Serif', serif;
+    font-size: clamp(1rem, 2vw, 3rem);
+    color: #d0d0d0;
+    background-color: transparent;
+}
+
+.textOverlayPara{
+    text-align: justify;
+    padding: 5vh;
+    font-family: 'Noto Serif', serif;
+    font-size: var(--vidTextOvrFont);
+    color: #d0d0d0;
+    background-color: transparent;
+}
+
+.textOverlayRegards{
+    width: 35vw;
+    text-align: right;
+    font-family: 'Noto Serif', serif;
+    font-size: var(--vidTextOvrFont);
+    color: #d0d0d0;
+    background-color: transparent;
+}
+
+
+.videoBg{
+    overflow:hidden;
+    pointer-events: none;  
+    position: absolute;
+    top: 25.5vh;
+    bottom: 0;
+    width: 100%; 
+    height: 130vh;
+    z-index: 0;
+    border: transparent;
+    clip-path: inset(30vh 0px 30vh 0px);
+}
+
+.footer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--backgroundColor);
+    height: 30vh;
+    width: auto;
+}
+
+.titleMenu, .titleLocation, .titleContact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.menuLayer{
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(100px, 0.9fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    width: 80vw;
+    height: 55vw;
+    background-color: #4f585c30;
+    transition: all 0.5s;
+
+    border-radius: 20px;
+    border: 5px double black;
+}
+
+.locationLayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 35vw;
+    background-color: #4f585c30;
+    transition: all 0.5s;
+
+    border-radius: 20px;
+    border: 5px double black;
+}
+
+.textLocation{
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+
+.menuList{
+    font-family: 'Noto Serif', serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+
+    padding: 10px;
+}
+
+.foodDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.foodImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 0.2rem solid #000000b2;
+    box-shadow: 0 0.3rem 0.3rem 0.2rem #7e7e7e;
+}
+
+.foodText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    justify-content: center;
+    padding-left:20px ;
+    background-color: transparent;
+}
+.foodText p {
+    background-color: transparent;
+}
+.foodText p:first-child{
+    font-size: 20px;
+    font-weight: 600;
+}
+.foodText p:nth-child(2){
+    font-style: italic;
+    font-size: 14px;
+}
+.foodText p:last-child {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.locationMaps{
+    width: 700px;
+    height: 500px;
+    border: 0;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.layerContactUs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    height: 35vw;
+    background-color: #4f585c30;
+    transition: all 0.5s;
+
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px double black;
+}
+
+.layerRightContact, .layerLeftContact{
+
+    font-family: 'Noto Serif', serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    gap: 10px;
+
+    width: 30vw;
+    background-color: transparent;
+}
+
+.layerRightContact{
+    border-radius: 20px;
+    height: 20vh;
+    padding: 10px;
+    gap: 20px;
+    
+    font-size: 20px;
+    align-items: flex-start;
+}
+
+.contactDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.layerCaptionContact {
+    background-color: transparent;
+    font-size: 22px;
+}
+
+.layerForms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: transparent;
+}
+
+.layerForms input{
+    width: 250px;
+    border-radius: 5px;
+}
+
+.layerForms input:nth-child(3){
+    height: 10vh;
+}
+
+.layerForms button{
+    border-radius: 5px;
+    width: 100px;
+}

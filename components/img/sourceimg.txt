@@ -1,0 +1,47 @@
+https://www.expatica.com/fr/lifestyle/food-drink/top-french-foods-with-recipes-106720/
+
+to insert video youtube
+
+add
+?autoplay=1&mute=1&controls=0&loop=1
+
+<iframe width="auto" height="45vh"
+src="https://www.youtube.com/watch?v=yR076KE_Fb4?autoplay=1&mute=1&controls=0&loop=1">
+</iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yR076KE_Fb4?controls=0&amp;start=2" title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+https://www.youtube.com/embed/MiD_CP_Pios?autohide=1&autoplay=0&controls=0&enablejsapi=1&iv_load_policy=3&loop=0&modestbranding=1&playsinline=1&rel=0&showinfo=0&wmode=opaque&origin=https%3A%2F%2Fpanicatthedisco.com&widgetid=1
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4287.430115749213!2d7.28728590774934!3d43.7108015188692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cddbe15426d6e7%3A0x3b0782f73b249e3a!2sKFC%20Nice%20Riquier!5e0!3m2!1sen!2sid!4v1654993971435!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+ //const formDiv = document.createElement('div');
+    //     const formCaption = document.createElement('p');
+    //     const formInput = document.createElement('form');
+    //         const inputName = document.createElement('input');
+    //         const inputEmail = document.createElement('input');
+    //         const inputMsg = document.createElement('input');
+    //         const submitBtn = document.createElement('button');
+
+    // const contactDiv = document.createElement('div');
+    //     const contactNum = document.createElement('p');
+    //     const contactEmail = document.createElement('p');
+    //     const contactMsg = document.createElement('p');
+    //     const contactHours = document.createElement('p');
+
+    // layer.className='layerContact';
+    // formDiv.className='formDiv';
+    //     formCaption.className='formCaption';
+    //     formInput.className='formInput';
+    //         inputName.className = 'forms';
+    //         inputEmail.className = 'forms';
+    //         inputMsg.className = 'forms';
+    //         submitBtn.className ='submitBtn';
+    // contactDiv.className='contactDiv';
+    //     contactNum.className='contacts';
+    //     contactEmail.className='contacts';
+    //     contactMsg.className='contacts';
+    //     contactHours.className='contacts';
