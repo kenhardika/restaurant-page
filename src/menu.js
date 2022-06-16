@@ -48,7 +48,7 @@ function createMenu(name, desc, price){
     menuList.className='menuList';
 
     foodDiv.className='foodDiv';
-        foodImg.src=`/img/food-${name}.jpg`;
+        foodImg.src=`./img/food-${name}.jpg`;
         foodImg.className='foodImg';
 
     foodText.className='foodText';
